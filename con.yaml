@@ -1,0 +1,53 @@
+#GZ_TO_ROS  # BIDIRECTIONAL or ROS_TO_GZ
+- gz_topic_name: "/model/simple_tracked/link/right_track/odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  ros_topic_name: "rto"
+  direction: BIDIRECTIONAL
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
+- gz_topic_name: "/model/simple_tracked/link/left_track/odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  ros_topic_name: "lto"
+  direction: BIDIRECTIONAL
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
+
+- gz_topic_name: "/clock"
+  gz_type_name: "gz.msgs.Clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  ros_topic_name: "clo"
+  direction: GZ_TO_ROS
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
+
+- gz_topic_name: "/dec"
+  gz_type_name: "gz.msgs.Image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  ros_topic_name: "dec"
+  direction: GZ_TO_ROS
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
+
+- gz_topic_name: "/keyboard/keypress"
+  gz_type_name: "gz.msgs.Int32"
+  ros_type_name: "std_msgs/msg/Int32"
+  ros_topic_name: "kep"
+  direction: GZ_TO_ROS
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
+
+- gz_topic_name: "/model/simple_tracked/cmd_vel"
+  gz_type_name: "gz.msgs.Twist"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  ros_topic_name: "cv"
+  direction: BIDIRECTIONAL
+  subscriber_queue: 1
+  publisher_queue: 1
+  lazy: true
