@@ -35,3 +35,7 @@ ros2 launch lau.py
 ```
 colcon build
 ros2 run pac nod
+```
+
+## nod
+The ROS2 node. For fast compilation some import files are commented out. It takes keyboard, sensor and odometry inputs from Gazebo and makes some actions according to those. (Publishes 2 types of commands: linear and angular velocity. Tries to not fall down; on edges, turns for a random amount of time to randomly move onside of the panel.
